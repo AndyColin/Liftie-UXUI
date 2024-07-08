@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liftie App</title>
+    <link rel="stylesheet" href="Liftie.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Login Screen -->
+        <div id="login-screen" class="screen">
+            <h1>Login</h1>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+        
+        <!-- Introduction Screen -->
+        <div id="intro-screen" class="screen" style="display:none;">
+            <video id="intro-video" width="320" height="240" controls>
+                <source src="mela.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>Hola soy Mela! Te acompañaré a comprender tu cuerpo y alcanzar tu mejor versión</p>
+            <p>¿Cómo te llamas?</p>
+            <input type="text" id="username" placeholder="¿cómo te dicen en casa?">
+            <button onclick="startQuestions()">Continuar</button>
+        </div>
+        
+        <!-- Questions Screen -->
+        <div id="questions-screen" class="screen" style="display:none;">
+            <img id="mela-state" class="mela-state" src="Mela V2.jpg" alt="Mela">
+            <p id="question-text"></p>
+            <div id="answers"></div>
+            <button onclick="nextQuestion()">Siguiente</button>
+        </div>
+        
+        <!-- Final Question Screen -->
+        <div id="final-question-screen" class="screen" style="display:none;">
+            <p>Hmmm.... una última pregunta: ¿eres mujer?</p>
+            <button onclick="setGender('si')">Sí</button>
+            <button onclick="setGender('no')">No</button>
+        </div>
+        
+        <!-- Age Range Screen -->
+        <div id="age-range-screen" class="screen" style="display:none;">
+            <p>Genial! Somos únicas, así que dime 
+                ¿qué opción te sienta mejor?</p>
+            <button onclick="setAgeRange('-18')">-18</button>
+            <button onclick="setAgeRange('18-35')">18-35</button>
+            <button onclick="setAgeRange('embarazo')">Estoy embarazada!</button>
+            <button onclick="setAgeRange('36-45')">36-45</button>
+            <button onclick="setAgeRange('46+')">46+</button>
+        </div>
+
+        <!-- Cycle Phase Screen -->
+        <div id="cycle-phase-screen" class="screen" style="display:none;">
+            <p>¿En qué fase de tu ciclo menstrual te encuentras?</p>
+            <button onclick="setCyclePhase('folicular')">Folicular</button>
+            <button onclick="setCyclePhase('ovulación')">Ovulación</button>
+            <button onclick="setCyclePhase('luteal')">Luteal</button>
+            <button onclick="setCyclePhase('menstrual')">Menstrual</button>
+        </div>
+    </div>
+
+    <script src="Liftie.js"></script>
+</body>
+</html>

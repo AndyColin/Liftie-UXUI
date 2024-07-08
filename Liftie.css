@@ -1,0 +1,65 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+
+.container {
+    width: 1200px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    border: 1px solid #1875E8;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-image: url("mela.mp4");
+    background-size: 100% 100%;
+    position: relative;
+}
+
+
+.screen {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(224, 221, 224, 0.904);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #e4ddda8e;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 5px;
+    background-color: #1d335cc5;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3031441e;
+}
+
+.mela-state {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+}
